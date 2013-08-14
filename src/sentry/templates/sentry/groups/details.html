@@ -14,7 +14,7 @@
         <div id="event_list" class="inactive" ng-controller="StreamCtrl">
             <ul class="group-list">
                 {% verbatim %}
-                <li class="group {{getLevelClassName(group)}} with-sparkline" data-id="{{group.id}}"
+                <li class="group {{group.getLevelClassName()}} with-sparkline" data-id="{{group.id}}"
                     ng-repeat="group in groups | orderBy:'score'">
                     <div class="count" data-count="{{utils.formatNumber(group.count)}}">
                         <span title="{{group.count}}">{{utils.formatNumber(group.count)}}</span>
