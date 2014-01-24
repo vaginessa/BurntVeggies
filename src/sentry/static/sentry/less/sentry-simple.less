@@ -48,6 +48,16 @@
 @import "../bootstrap3/utilities.less";
 @import "../bootstrap3/responsive-utilities.less";
 
+@import "ss-fonts.less";
+
+// standardize icon size
+
+.icon-arrow-down, .icon-arrow-right, .icon-arrow-left {
+  font-size: 16px !important;
+  position: relative;
+  top: 3px;
+}
+
 // Sentry theme:
 
 body {
@@ -58,19 +68,51 @@ body {
 header {
   background: #465262;
   color: #fff;
-  padding: 30px 0;
+  padding: 27px 0;
   margin: 0 0 20px;
   a {
     color: #fff;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   .user-nav {
+    margin-top: 6px;
+    .clearfix();
     li {
       list-style: none;
       float: left;
       margin-left: 30px;
+      a {
+        font-size: 15px;
+      }
+    }
+    [class^="icon-"], [class*=" icon-"] {
+      position: relative;
+      top: 1px;
+      margin-right: 4px;
     }
   }
+
+  .project-dropdown {
+    .team-name {
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .project-name {
+      font-weight: 400;
+      color: #B5B9C0;
+    }
+
+    .icon-arrow-down {
+      top: 0;
+    }
+  }
+
 }
 
 .container {
@@ -81,12 +123,45 @@ header {
   margin: 0 0 20px;
 }
 
+.search {
+  position: relative;
+  width: 25%;
+  padding-left: 24px;
+  padding-top: 2px;
+  .icon-search {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  .form-control {
+    border: none;
+    box-shadow: none;
+    margin-right: 24px;
+    padding-left: 0;
+  }
+}
+
+#sidebar {
+  .nav li {
+    margin: 0 0 5px;
+    > a {
+      background: #f6f7f7;
+      font-weight: 600;
+      padding: 6px 12px;
+    }
+
+    &.active a, &.active:hover a, &.active:focus a {
+      background: @brand-primary;
+    }
+  }
+}
+
 .events {
   .list-unstyled;
   .event {
     position: relative;
     border-bottom: 3px solid #F8F9FA;
-    padding: 20px 0 20px 64px;
+    padding: 16px 0 16px 64px;
 
     &:last-child {
       border-bottom: none;
@@ -97,7 +172,7 @@ header {
     font-size: 16px;
     letter-spacing: -1px;
     .square(52px);
-    line-height:50px;
+    line-height:49px;
     text-align: center;;
     position: absolute;
     left: 0;

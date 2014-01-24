@@ -10,15 +10,16 @@
             <div class="container">          
                 <div class="pull-right">
                     <ul class="user-nav">
-                        <li><a href="#">Team Settings</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li class="dropdown-toggle"><a href="#"><span class="caret"></span></a></li>
+                        <li><a href="#"><span class="icon-settings"></span> Team Settings</a></li>
+                        <li><a href="#"><span class="icon-envelope"></span> Support</a></li>
+                        <li class="dropdown-toggle"><a href="#"><span class="icon-arrow-down"></span> </a></li>
                     </ul>
                 </div>
                 <div class="project-dropdown">
                     <a href="#" class="team-name">
                         Sentry
-                        <span class="selected-project">Backend</span>
+                        <span class="project-name">Backend</span>
+                        <span class="icon-arrow-down"></span>
                     </a>
                 </div>
             </div>
@@ -27,7 +28,10 @@
             <div class="container">
                 <ul class="nav nav-tabs project-nav">
                     <li class="pull-right search">
-                        <input type="text" placeholder="Search by id"/>
+                        <form>
+                            <span class="icon-search"></span>
+                            <input type="text" placeholder="Search by id" class="form-control" />
+                        </form>
                     </li>
                     <li class="active"><a href="#">Stream</a></li>
                     <li><a href="#">Explore</a></li>
@@ -38,14 +42,14 @@
                         <div id="main" class="col-sm-9">
                             <div class="stream-actions">
                                 <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-default">Prev</button>
-                                    <button type="button" class="btn btn-default">Next</button>
+                                    <button type="button" class="btn btn-default"><span class="icon-arrow-left"></span></button>
+                                    <button type="button" class="btn btn-default"><span class="icon-arrow-right"></span></button>
                                 </div>
                                 <a href="#" class="btn btn-default">Resolve all</a>
                                 <a href="#" class="btn btn-default">Pause</a>
                                 <div class="btn-group">
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                    Sort by: Last seen <span class="caret"></span>
+                                    Sort by: Last seen <span class="icon-arrow-down"></span>
                                   </button>
                                   <ul class="dropdown-menu" role="menu">
                                     <li><a href="#">Priority</a></li>
@@ -59,7 +63,7 @@
                                 </div>
                                 <div class="btn-group">
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                    Since: Jan 18th <span class="caret"></span>
+                                    Since: Jan 18th <span class="icon-arrow-down"></span>
                                   </button>
                                   <ul class="dropdown-menu" role="menu">
                                     <li><a href="#">Priority</a></li>
@@ -77,8 +81,8 @@
                                 <li class="event">
                                     <div class="pull-right">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                            <span class="caret"></span>
+                                            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="icon-arrow-down"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Action</a></li>
@@ -102,8 +106,8 @@
                                 <li class="event">
                                     <div class="pull-right">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                            <span class="caret"></span>
+                                            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="icon-arrow-down"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Action</a></li>
@@ -127,8 +131,8 @@
                                 <li class="event">
                                     <div class="pull-right">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                            <span class="caret"></span>
+                                            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="icon-arrow-down"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Action</a></li>
@@ -152,8 +156,8 @@
                                 <li class="event">
                                     <div class="pull-right">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                            <span class="caret"></span>
+                                            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="icon-arrow-down"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Action</a></li>
@@ -177,8 +181,8 @@
                                 <li class="event">
                                     <div class="pull-right">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                            <span class="caret"></span>
+                                            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span class="icon-arrow-down"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Action</a></li>
@@ -202,8 +206,8 @@
                             </ul>
                             <div class="stream-actions">
                                 <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-default">Prev</button>
-                                    <button type="button" class="btn btn-default">Next</button>
+                                    <button type="button" class="btn btn-default"><span class="icon-arrow-left"></span></button>
+                                    <button type="button" class="btn btn-default"><span class="icon-arrow-right"></span></button>
                                 </div>
                             </div>
                         </div>
