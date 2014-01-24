@@ -50,7 +50,7 @@
 
 @selectize-arrow-size: 5px;
 @selectize-arrow-color: #808080;
-@selectize-arrow-offset: 15px;
+@selectize-arrow-offset: 10px;
 
 @selectize-caret-margin: 0 2px 0 0;
 @selectize-caret-margin-rtl: 0 4px 0 -2px;
@@ -250,22 +250,18 @@
   &.input-active, &.input-active input { cursor: text; }
 
   &:after {
-    content: ' ';
+    font-family: "sentry-simple";
+    font-size: 16px;
+    content: "\e60f";
     display: block;
     position: absolute;
-    top: 50%;
+    top: 35%;
     right: @selectize-arrow-offset;
     margin-top: round(-@selectize-arrow-size / 2);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: @selectize-arrow-size @selectize-arrow-size 0 @selectize-arrow-size;
-    border-color: @selectize-arrow-color transparent transparent transparent;
   }
   &.dropdown-active:after {
+    content: "\e610";
     margin-top: @selectize-arrow-size * -0.8;
-    border-width: 0 @selectize-arrow-size @selectize-arrow-size @selectize-arrow-size;
-    border-color: transparent transparent @selectize-arrow-color transparent;
   }
 }
 

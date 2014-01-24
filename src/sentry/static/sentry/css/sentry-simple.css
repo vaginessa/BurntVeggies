@@ -5700,25 +5700,21 @@ td.visible-print {
   cursor: text;
 }
 .selectize-control.single .selectize-input:after {
-  content: ' ';
+  font-family: "sentry-simple";
+  font-size: 16px;
+  content: "\e60f";
   display: block;
   position: absolute;
-  top: 50%;
-  right: 15px;
+  top: 35%;
+  right: 10px;
   margin-top: -3px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 5px 0 5px;
-  border-color: #808080 transparent transparent transparent;
 }
 .selectize-control.single .selectize-input.dropdown-active:after {
+  content: "\e610";
   margin-top: -4px;
-  border-width: 0 5px 5px 5px;
-  border-color: transparent transparent #808080 transparent;
 }
 .selectize-control.rtl.single .selectize-input:after {
-  left: 15px;
+  left: 10px;
   right: auto;
 }
 .selectize-control.rtl .selectize-input > input {
