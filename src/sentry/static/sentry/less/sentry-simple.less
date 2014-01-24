@@ -50,6 +50,8 @@
 
 @import "ss-fonts.less";
 
+@import "selectize.less";
+
 // standardize icon size
 
 .icon-arrow-down, .icon-arrow-right, .icon-arrow-left {
@@ -68,7 +70,7 @@ body {
 header {
   background: #465262;
   color: #fff;
-  padding: 27px 0;
+  padding: 26px 0;
   margin: 0 0 20px;
   a {
     color: #fff;
@@ -80,6 +82,7 @@ header {
 
   .user-nav {
     margin-top: 6px;
+    margin-bottom: 0;
     .clearfix();
     li {
       list-style: none;
@@ -98,7 +101,7 @@ header {
 
   .project-dropdown {
     .team-name {
-      font-size: 25px;
+      font-size: 24px;
       font-weight: 600;
       letter-spacing: -0.5px;
     }
@@ -132,6 +135,7 @@ header {
     position: absolute;
     right: 0;
     top: 10px;
+    .opacity(.4);
   }
   .form-control {
     border: none;
@@ -143,11 +147,11 @@ header {
 
 #sidebar {
   .nav li {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
     > a {
       background: #f6f7f7;
       font-weight: 600;
-      padding: 6px 12px;
+      padding: 8px 14px;
     }
 
     &.active a, &.active:hover a, &.active:focus a {
@@ -176,7 +180,7 @@ header {
     text-align: center;;
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 19px;
     border: 3px solid #EEF0F3;
     border-radius: 52px;
   }

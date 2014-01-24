@@ -217,10 +217,22 @@
                               <li><a href="#">Bookmarked</a></li>
                             </ul>
                             <div class="filter">
-                                <h5>Status</h5>
+                                <h6><label for="status">Status</label></h6>
+                                <select id="status" class="contacts selectized" placeholder="Choose a status..." tabindex="-1" name="status">
+                                    <option value="">Choose a status...</option>
+                                    <option value="0">Unresolved</option>
+                                    <option value="1">Resolved</option>
+                                    <option value="2">Muted</option>
+                                </select>
                             </div>
                             <div class="filter">
-                                <h5>Client</h5>
+                                <h6><label for="client">Client</label></h6>
+                                <select id="select-to" class="contacts selectized" placeholder="Choose a client..." name="client">
+                                    <option value="">Choose a client...</option>
+                                    <option value="0">Unresolved</option>
+                                    <option value="1">Resolved</option>
+                                    <option value="2">Muted</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -236,5 +248,15 @@
                 Sentry 7.0.0-DEV (9765530)
             </div>
         </footer> -->
+        <script type="text/javascript" src="../js/libs/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="../js/libs/selectize.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            $('.selectized').selectize({
+                create: true,
+                sortField: 'text'
+            });
+        });
+        </script>
     </body>
 </html>
