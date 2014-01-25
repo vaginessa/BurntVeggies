@@ -1,11 +1,34 @@
-App = Ember.Application.create();
+App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
 
 App.Router.map(function() {
-  // put your routes here
+
+  this.resource('account', function() {
+    this.resource('account.settings', { path: '/settings' }, function() {
+      this.route('appearance');
+      this.route('notifications');
+      this.route('identities');
+    });
+  });
+
+  this.resource('team', function() {
+    this.resource('team.project', { path: '/project' }, function() {
+      this.route('group');
+      this.route('explore');
+      this.route('settings');
+    });
+
+    this.resource('team.settings', { path: '/settings' }, function() {
+      this.route('projects');
+      this.route('members');
+      this.route('access-groups');
+    });
+  });
 });
 
 App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return ['red', 'yellow', 'blue'];
+  beforeModel: function() {
+    this.transitionTo('team.project');
   }
 });

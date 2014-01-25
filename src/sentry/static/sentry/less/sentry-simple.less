@@ -60,6 +60,18 @@
   top: 3px;
 }
 
+.btn-sm {
+  .icon-arrow-down, .icon-arrow-right, .icon-arrow-left {
+    font-size: 14px !important;
+    top: 2px;
+  }
+}
+
+.btn-white {
+  background: #fff;
+  border: 2px solid #f1f2f3;
+}
+
 // Sentry theme:
 
 body {
@@ -119,7 +131,7 @@ header {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 980px;
 }
 
 .project-nav {
@@ -145,20 +157,19 @@ header {
   }
 }
 
-#sidebar {
-  .nav li {
-    margin: 0 0 6px;
-    > a {
-      background: #f6f7f7;
-      font-weight: 600;
-      padding: 8px 14px;
-    }
+.nav-stacked li {
+  margin: 0 0 6px;
+  > a, > a:hover {
+    background: #f7f7f7;
+    font-weight: 600;
+    padding: 8px 14px;
+  }
 
-    &.active a, &.active:hover a, &.active:focus a {
-      background: @brand-primary;
-    }
+  &.active a, &.active:hover a, &.active:focus a {
+    background: @brand-primary;
   }
 }
+
 
 .events {
   .list-unstyled;
