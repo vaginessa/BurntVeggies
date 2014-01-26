@@ -15,7 +15,9 @@ App.Router.map(function() {
   this.resource('team', function() {
     this.resource('team.project', { path: '/project' }, function() {
       this.route('group');
-      this.route('explore');
+      this.resource('team.project.explore', { path: '/explore'}, function() {
+        this.route('item');
+      });
       this.route('settings');
     });
 
@@ -31,4 +33,12 @@ App.IndexRoute = Ember.Route.extend({
   beforeModel: function() {
     this.transitionTo('team.project');
   }
+});
+
+App.TeamProjectController = Ember.Controller.extend({
+  showProjectTabs: true
+});
+
+App.TeamProjectGroupController = Ember.Controller.extend({
+  
 });
