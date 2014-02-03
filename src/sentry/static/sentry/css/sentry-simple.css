@@ -6083,11 +6083,34 @@ header .project-dropdown .icon-arrow-down {
   font-size: 14px;
   margin: 0;
 }
+.box .box-content.with-padding {
+  padding: 15px 15px 5px;
+}
 .table-no-padding tbody tr td {
   padding: 5px 0;
 }
 .table-borderless tbody tr td {
   border: 0;
+}
+.tags {
+  padding-left: 0;
+  list-style: none;
+}
+.tags li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 30px;
+}
+.tags li strong {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 33%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #explore h2 {
   margin: 0 0 10px;

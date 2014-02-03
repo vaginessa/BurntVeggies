@@ -401,6 +401,11 @@ header {
       margin: 0;
     }
   }
+  .box-content {
+    &.with-padding {
+      padding: 15px 15px 5px;
+    }
+  }
 }
 
 .table-no-padding {
@@ -413,6 +418,27 @@ header {
   tbody tr td {
     border: 0;
     border: 0;
+  }
+}
+
+.tags {
+  .list-unstyled;
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    line-height: 30px;
+
+    strong {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 33%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
