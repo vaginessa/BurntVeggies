@@ -6069,7 +6069,7 @@ header .project-dropdown .icon-arrow-down {
 .box {
   border: 2px solid #f1f2f3;
   border-radius: 7px;
-  margin: 0 0 20px;
+  margin: 0 0 30px;
 }
 .box .box-header {
   padding: 10px 14px;
@@ -6111,6 +6111,18 @@ header .project-dropdown .icon-arrow-down {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.frame .context-toggle {
+  float: right;
+}
+.frame pre {
+  margin-top: 10px;
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+.frame pre .L6 {
+  background: #f8f8f8;
 }
 #explore h2 {
   margin: 0 0 10px;
