@@ -708,65 +708,147 @@
                         <div class="box-header">
                             <h4>Timeline</h4>
                         </div>
-                        <ul class="timeline">
-                            <li class="timeline-item console">
-                                <div class="row">
-                                    <div class="col-sm-6 description">
-                                        <h5>Console</h5>
-                                        <p><strong>Severity</strong> info</p>
-                                        <p><strong>Message</strong> initialize page layout</p>
-                                    </div>
-                                    <div class="col-sm-6 graph">
-                                        <div class="bar-container" style="width: 24%">
-                                            <div class="bar"></div>
-                                            <div class="bar-label">22 ms</div>
+                        <div class="box-content">
+                            <ul class="timeline">
+                                <li class="timeline-item console">
+                                    <div class="row">
+                                        <div class="col-sm-7 description">
+                                            <h5>Console</h5>
+                                            <p><strong>Severity</strong> info</p>
+                                            <p><strong>Message</strong> initialize page layout</p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="graph">
+                                                <div class="scale">
+                                                    <div class="scale-line scale-line-0">
+                                                        <span class="scale-label">0s</span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-25">
+                                                        <span class="scale-label">30s</span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-50">
+                                                        <span class="scale-label">60s</span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-75">
+                                                        <span class="scale-label">90s</span>
+                                                    </div>
+                                                </div>
+                                                <div class="blip-container" style="margin-left: 10%;">
+                                                    <div class="blip"></div>
+                                                    <div class="blip-label">22 ms</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="timeline-item user-action">
-                                <div class="row">
-                                    <div class="col-sm-6 description">
-                                        <h5>User click</h5>
-                                        <p><strong>element</strong> <code>button.sup</code></p>
-                                    </div>
-                                    <div class="col-sm-6 graph">
-                                        <div class="bar-container" style="margin-left: 24%; width: 24%">
-                                            <div class="bar"></div>
-                                            <div class="bar-label">22 ms</div>
+                                </li>
+                                <li class="timeline-item user-action">
+                                    <div class="row">
+                                        <div class="col-sm-7 description">
+                                            <h5>User click</h5>
+                                            <p><strong>element</strong> <code>button.sup</code></p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="graph">
+                                                <div class="scale">
+                                                    <div class="scale-line scale-line-0">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-25">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-50">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-75">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="blip-container" style="margin-left: 25%">
+                                                    <div class="blip"></div>
+                                                    <div class="blip-label">22 ms</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="timeline-item ajax">
-                                <div class="row">
-                                    <div class="col-sm-6 description">
-                                        <h5>Ajax GET</h5>
-                                        <p><strong>element</strong> <code>button.sup</code></p>
-                                    </div>
-                                    <div class="col-sm-6 graph">
-                                        <div class="bar-container" style="margin-left: 48%; width: 10%">
-                                            <div class="bar"></div>
-                                            <div class="bar-label">22 ms</div>
+                                </li>
+                                <li class="timeline-item ajax">
+                                    <div class="row">
+                                        <div class="col-sm-7 description">
+                                            <h5>Ajax GET</h5>
+                                            <p><strong>element</strong> <code>button.sup</code></p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="graph">
+                                                <div class="scale">
+                                                    <div class="scale-line scale-line-0">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-25">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-50">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-75">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="blip-container" style="margin-left: 60%">
+                                                    <div class="blip"></div>
+                                                    <div class="blip-label">22 ms</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="timeline-item error">
-                                <div class="row">
-                                    <div class="col-sm-6 description">
-                                        <h5>Error</h5>
-                                        <p><strong>element</strong> <code>button.sup</code></p>
+                                    <div class="context hide">
+                                        
+                                            <pre>
+    App.ApplicationRoute = Ember.Route.extend({
+      actions: {
+        openModal: function(modalName) {
+          return this.render(modalName, {
+            into: 'application',
+            outlet: 'modal'
+          });
+        }
+      }
+    });
+                                            </pre>
+                                        
                                     </div>
-                                    <div class="col-sm-6 graph">
-                                        <div class="bar-container" style="margin-left: 58%; width: 42%">
-                                            <div class="bar"></div>
-                                            <div class="bar-label">22 ms</div>
+                                </li>
+                                <li class="timeline-item error">
+                                    <div class="row">
+                                        <div class="col-sm-7 description">
+                                            <h5>Error</h5>
+                                            <p><strong>element</strong> <code>button.sup</code></p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="graph">
+                                                <div class="scale">
+                                                    <div class="scale-line scale-line-0">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-25">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-50">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                    <div class="scale-line scale-line-75">
+                                                        <span class="scale-label"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="blip-container" style="margin-left: 90%;">
+                                                    <div class="blip"></div>
+                                                    <div class="blip-label">22 ms</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
