@@ -187,7 +187,8 @@ header {
 }
 
 .stream-actions {
-  margin: 0 0 20px;
+  .clearfix();
+  margin: 0 0 18px;
 }
 
 .events {
@@ -205,7 +206,8 @@ header {
     }
 
     &:last-child {
-      border-bottom: none;
+      border-bottom: 0;
+      // margin: 0 0 20px;
     }
   }
 
@@ -255,11 +257,100 @@ header {
   }
 }
 
+.timeline {
+  .list-unstyled;
+  margin: 0;
+  .timeline-item {
+    border-bottom: 2px solid lighten(#f1f2f3, 2.5);
+    padding: 10px 14px;
+    min-height: 92px;
+    position: relative;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .description {
+      strong {
+        color: #bec3c7;
+        display: inline-block;
+        min-width: 80px;
+      }
+      h5 {
+        margin: 6px 0;
+      }
+      p {
+        margin: 3px 0;
+      }
+      p:last-child  {
+        margin: 0;
+      }
+    }
+    .graph {
+      padding-top: 23px;
+      .bar-container {
+
+      }
+      .bar {
+        height: 12px;
+        width: 100%;
+        background: lighten(#bec3c7, 12);
+        border: 2px solid rgba(0,0,0, .1);
+        border-radius: 12px;
+        margin: 0 0 4px;
+      }
+      .bar-label {
+        color: #bec3c7;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+    &.console .bar     {background: #E6D347;}
+    &.user-action .bar {background: #47E684}
+    &.ajax .bar        {background: #49A9E6}
+    &.timeout .bar     {}
+    &.error .bar       {background: #E6475A}
+
+    &.error {
+      color: #7E5B5F;
+      strong, .bar-label { color: lighten(#7E5B5F, 30) }
+      .description,.graph {
+        position: relative;
+        z-index: 2;
+      }
+      &:after {
+        background: lighten(#E6475A, 39);
+        position: absolute;
+        content: "";
+        display: block;
+        top: -3px;
+        left: -2px;
+        right: -2px;
+        bottom: -3px;
+        z-index: 1;
+        border: 2px solid rgba(0,0,0, .05);
+      }
+      &:last-child:after {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+}
+
 .box {
   border: 2px solid #f1f2f3;
-  border-radius: 5px;
-  padding: 15px 15px 0;
-  margin: 0 0 30px;
+  border-radius: 7px;
+  margin: 0 0 20px;
+  .box-header {
+    padding: 10px 14px;
+    border-bottom: 2px solid #f1f2f3;
+    background: lighten(#f1f2f3, 4.4);
+    border-radius: 4px 4px 0 0;
+    h3,h4,h5 {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
 }
 
 .table-no-padding {

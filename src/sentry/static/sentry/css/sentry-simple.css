@@ -5856,7 +5856,23 @@ header .project-dropdown .icon-arrow-down {
   background: #49a9e6;
 }
 .stream-actions {
-  margin: 0 0 20px;
+  margin: 0 0 18px;
+}
+.stream-actions:before,
+.stream-actions:after {
+  content: " ";
+  display: table;
+}
+.stream-actions:after {
+  clear: both;
+}
+.stream-actions:before,
+.stream-actions:after {
+  content: " ";
+  display: table;
+}
+.stream-actions:after {
+  clear: both;
 }
 .events {
   padding-left: 0;
@@ -5874,7 +5890,7 @@ header .project-dropdown .icon-arrow-down {
   top: 0;
 }
 .events .event:last-child {
-  border-bottom: none;
+  border-bottom: 0;
 }
 .events .count {
   font-size: 16px;
@@ -5916,11 +5932,105 @@ header .project-dropdown .icon-arrow-down {
 .events .details .meta a {
   color: #c6c6cc;
 }
+.timeline {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+.timeline .timeline-item {
+  border-bottom: 2px solid #f8f8f9;
+  padding: 10px 14px;
+  min-height: 92px;
+  position: relative;
+}
+.timeline .timeline-item:last-child {
+  border-bottom: none;
+}
+.timeline .timeline-item .description strong {
+  color: #bec3c7;
+  display: inline-block;
+  min-width: 80px;
+}
+.timeline .timeline-item .description h5 {
+  margin: 6px 0;
+}
+.timeline .timeline-item .description p {
+  margin: 3px 0;
+}
+.timeline .timeline-item .description p:last-child {
+  margin: 0;
+}
+.timeline .timeline-item .graph {
+  padding-top: 23px;
+}
+.timeline .timeline-item .graph .bar {
+  height: 12px;
+  width: 100%;
+  background: #dfe1e3;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 0 0 4px;
+}
+.timeline .timeline-item .graph .bar-label {
+  color: #bec3c7;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.timeline .timeline-item.console .bar {
+  background: #E6D347;
+}
+.timeline .timeline-item.user-action .bar {
+  background: #47e684;
+}
+.timeline .timeline-item.ajax .bar {
+  background: #49a9e6;
+}
+.timeline .timeline-item.error .bar {
+  background: #e6475a;
+}
+.timeline .timeline-item.error {
+  color: #7E5B5F;
+}
+.timeline .timeline-item.error strong,
+.timeline .timeline-item.error .bar-label {
+  color: #c4aeb0;
+}
+.timeline .timeline-item.error .description,
+.timeline .timeline-item.error .graph {
+  position: relative;
+  z-index: 2;
+}
+.timeline .timeline-item.error:after {
+  background: #fef6f7;
+  position: absolute;
+  content: "";
+  display: block;
+  top: -3px;
+  left: -2px;
+  right: -2px;
+  bottom: -3px;
+  z-index: 1;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
+.timeline .timeline-item.error:last-child:after {
+  border-radius: 0 0 5px 5px;
+}
 .box {
   border: 2px solid #f1f2f3;
-  border-radius: 5px;
-  padding: 15px 15px 0;
-  margin: 0 0 30px;
+  border-radius: 7px;
+  margin: 0 0 20px;
+}
+.box .box-header {
+  padding: 10px 14px;
+  border-bottom: 2px solid #f1f2f3;
+  background: #fdfdfd;
+  border-radius: 4px 4px 0 0;
+}
+.box .box-header h3,
+.box .box-header h4,
+.box .box-header h5 {
+  font-size: 14px;
+  margin: 0;
 }
 .table-no-padding tbody tr td {
   padding: 5px 0;
